@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class SignUp extends Component {
-  state = { displayName: '', email: '', password: '' };
+  state = { displayName: "", email: "", password: "" };
 
-  handleChange = event => {
+  handleChange = (event) => {
     const { name, value } = event.target;
-
     this.setState({ [name]: value });
   };
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
 
-    this.setState({ displayName: '', email: '', password: '' });
+    this.setState({ displayName: "", email: "", password: "" });
   };
 
   render() {
