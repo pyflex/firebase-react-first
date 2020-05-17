@@ -31,6 +31,7 @@ class UserProfile extends Component {
     }
 
     if (this.file) {
+      // could also have dont the normal .doc(`something/${id}`)
       storage
         .ref()
         .child("user-profiles")

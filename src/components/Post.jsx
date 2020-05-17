@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import moment from "moment";
 import { firestore } from "../firebase";
@@ -19,7 +20,9 @@ const Post = ({ title, content, user, createdAt, stars, comments, id }) => {
   return (
     <article className="Post">
       <div className="Post--content">
-        <h3>{title}</h3>
+        <Link to={`posts/${id}`}>
+          <h3>{title}</h3>
+        </Link>
         <div>{content}</div>
       </div>
       <div className="Post--meta">
