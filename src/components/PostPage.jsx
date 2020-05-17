@@ -45,11 +45,15 @@ class PostPage extends Component {
 
   createComment = (comment) => {
     const { user } = this.props;
+    const { comments } = this.state;
+    const lenComments = comments.length + 1;
+    this.postRef.update({ comments: lenComments });
     this.commentsRef.add({ ...comment, user });
   };
 
   render() {
     const { comments, post } = this.state;
+
     return (
       <section>
         {post && <Post {...post} />}
